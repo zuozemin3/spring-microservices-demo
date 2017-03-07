@@ -28,6 +28,7 @@ public class MedicalController {
     @RequestMapping("/forms")
     @ResponseBody
     List<Form> findFormsByUserId() {
+        LOG.info("findFormsByUserId");
         return formFeignClient.findFormsByUserId("588666");
     }
 }

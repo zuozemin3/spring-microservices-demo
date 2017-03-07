@@ -30,6 +30,12 @@ public class FormController {
     @RequestMapping(value = "/forms/{userId}", method = RequestMethod.GET)
     @ResponseBody
     List<Form> findFormsByUserId(@PathVariable String userId) {
+        LOG.info("start to find");
+        try {
+            Thread.sleep(500);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return formService.findByUserIdAndStatus(Long.valueOf(userId)).stream().map(formUserDTO -> formUserDTO.getForm()).collect
                 (Collectors.toList());
     }
