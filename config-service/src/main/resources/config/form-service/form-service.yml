@@ -1,0 +1,13 @@
+env: default
+spring:
+    datasource:
+        url: jdbc:mysql://192.168.10.22:33306/xsl_form?useUnicode=true&amp;characterEncoding=UTF-8
+        username: root
+        password: DoeP1cWsuYg
+        driver-class-name: com.mysql.jdbc.Driver
+        initialSize: 5
+        minIdle: 5
+        maxActive: 10
+        testWhileIdle: true
+        maxWait: 1000
+        validationQuery:  SELECT 1

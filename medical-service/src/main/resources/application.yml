@@ -1,0 +1,19 @@
+server:
+    port: 18091
+
+eureka:
+    client:
+        registerWithEureka: true
+        fetchRegistry: true
+        serviceUrl:
+            defaultZone: http://localhost:8761/eureka/
+    instance:
+        preferIpAddress: true
+
+feign:
+    hystrix:
+        enabled: true
+
+management:
+    security:
+        enabled: false

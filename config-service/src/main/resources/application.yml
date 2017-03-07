@@ -1,0 +1,16 @@
+info:
+    app:
+        name: config-service
+        description: 配置服务
+
+server:
+    port: 8088
+
+spring:
+    profiles:
+        active: native
+    cloud:
+        config:
+            server:
+                native:
+                    searchLocations: file:///Users/flyloong/Works/projects/home/spring-microservices-demo/config-service/src/main/resources/config/{application}/
