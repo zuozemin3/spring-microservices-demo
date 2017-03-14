@@ -3,6 +3,7 @@ package com.example.form.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.common.collect.Lists;
+import io.swagger.annotations.ApiModelProperty;
 import org.hibernate.annotations.Where;
 import org.hibernate.validator.constraints.URL;
 
@@ -24,6 +25,7 @@ public class Form {
     private List<FormUser> formUsers = Lists.newArrayList();
 
     @NotNull
+    @ApiModelProperty(notes = "表单名称", required = true)
     private String formName;
 
     @NotNull
@@ -37,6 +39,7 @@ public class Form {
 
     @NotNull
     @URL
+    @ApiModelProperty(notes = "表单URL")
     private String formUrl;
 
     private Integer parentSpeciality;
